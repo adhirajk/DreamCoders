@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PL/SQL</title>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="container">
+		<div class="sidebar">
+            <div class="sidebar_heading"><h1>Content</h1></div>
+			<ul class="lists">
+				<li class="list">PL/SQL Introduction
+                    <pre>
+                        <h1>PL/SQL Introduction</h1>
+                        <p>PL/SQL is a block structured language that enables developers to combine the power of SQL with procedural statements.All the statements of a block are passed to oracle engine all at once which increases processing speed and decreases the traffic. </p>
+
+                        <h1>Basics of PL/SQL</h1>
+                        <p>PL/SQL stands for Procedural Language extensions to the Structured Query Language (SQL).
+
+PL/SQL is a combination of SQL along with the procedural features of programming languages.
+
+Oracle uses a PL/SQL engine to processes the PL/SQL statements.
+
+PL/SQL includes procedural language elements like conditions and loops. It allows declaration of constants and variables, procedures and functions, types and variable of those types and triggers.
+</p>
+
+                        <h1>Disadvantages of SQL:</h1>
+                        <p>SQL doesn’t provide the programmers with a technique of condition checking, looping and branching.
+
+SQL statements are passed to Oracle engine one at a time which increases traffic and decreases speed.
+
+SQL has no facility of error checking during manipulation of data.</p>
+
+<h1>Features of PL/SQL:</h1>
+<p>PL/SQL is basically a procedural language, which provides the functionality of decision making, iteration and many more features of procedural programming languages.
+
+PL/SQL can execute a number of queries in one block using single command.
+
+One can create a PL/SQL unit such as procedures, functions, packages, triggers, and types, which are stored in the database for reuse by applications.
+
+PL/SQL provides a feature to handle the exception which occurs in PL/SQL block known as exception handling block.
+
+Applications written in PL/SQL are portable to computer hardware or operating system where Oracle is operational.
+
+PL/SQL Offers extensive error checking.</p>
+                    </pre>
+				</li>
+                <li class="list">Structure of PL/SQL
+                    <pre>
+                        <h1>Structure of PL/SQL</h1>
+                            <p>PL/SQL extends SQL by adding constructs found in procedural languages, resulting in a structural language that is more powerful than SQL. The basic unit in PL/SQL is a block. All PL/SQL programs are made up of blocks, which can be nested within each other.</p>
+                            <img src="plsql_structure.png" alt="">
+
+                            <p>
+Declare section starts with DECLARE keyword in which variables, constants, records as cursors can be declared which stores data temporarily. It basically consists definition of PL/SQL identifiers. This part of the code is optional.
+
+Execution section starts with BEGIN and ends with END keyword.This is a mandatory section and here the program logic is written to perform any task like loops and conditional statements. It supports all DML commands, DDL commands and SQL*PLUS built-in functions as well.
+
+Exception section starts with EXCEPTION keyword.This section is optional which contains statements that are executed when a run-time error occurs. Any exceptions can be handled in this section.  
+                            </p>
+                    </pre>
+                </li>
+                <li class="list">Procedures in PL/SQL
+
+                    <pre>
+                    <h1>Procedures in PL/SQL</h1>
+                    <p>PL/SQL is a block-structured language that enables developers to combine the power of SQL with procedural statements.
+
+A stored procedure in PL/SQL is nothing but a series of declarative SQL statements which can be stored in the database catalogue. A procedure can be thought of as a function or a method. They can be invoked through triggers, other procedures, or applications on Java, PHP etc.
+
+All the statements of a block are passed to Oracle engine all at once which increases processing speed and decreases the traffic.</p>
+
+<img src="procedure.png" alt="">
+
+<h1>Example</h1>
+<img src="procedure_eg.png" alt="">
+                </pre>
+            </li>
+            <li class="list">Functions in PL/SQL
+                <pre>
+                    <h1>Creating a function</h1>
+                    <p>A standalone function is created using the CREATE FUNCTION statement. The simplified syntax for the CREATE OR REPLACE PROCEDURE statement is as follows −</p>
+<img src="function.png" alt="">
+
+                    <h1>Calling a function</h1>
+                    <p>While creating a function, you give a definition of what the function has to do. To use a function, you will have to call that function to perform the defined task. When a program calls a function, the program control is transferred to the called function.
+
+A called function performs the defined task and when its return statement is executed or when the last end statement is reached, it returns the program control back to the main program.
+
+To call a function, you simply need to pass the required parameters along with the function name and if the function returns a value, then you can store the returned value. Following program calls the function totalCustomers from an anonymous block −</p>
+<img src="calling.png" alt="">
+
+<h1>Example</h1>
+<img src="function_eg.png" alt="">
+                </pre>
+            </li>
+            <li class="list">Exception handling
+
+                <pre>
+                    <h1>Syntax for Exception Handling</h1>
+<img src="excep_hndl_eg.png" alt="">
+
+                    <h1>User Defined Exceptions</h1>
+                    <p>PL/SQL facilitates their users to define their own exceptions according to the need of the program. A user-defined exception can be raised explicitly, using either a RAISE statement or the procedure DBMS_STANDARD.RAISE_APPLICATION_ERROR.</p>
+<img src="ud_excep.png" alt="">
+
+                    <h1>Pre Defined Exception</h1>
+                    <p>There are many pre-defined exception in PL/SQL which are executed when any database rule is violated by the programs.
+
+For example: NO_DATA_FOUND is a pre-defined exception which is raised when a SELECT INTO statement returns no rows.
+
+Following is a list of some important pre-defined exceptions:</p>
+<img src="predef_excep.png" alt="">
+                </pre>
+            </li>
+			</ul>
+		</div>
+		<div class="content_container">
+			
+		</div>
+		</div>
+
+
+
+		<script>
+			const container = document.querySelector(".content_container");
+			const [...lists] = document.querySelectorAll(".list");
+
+			lists.forEach((list) => {
+				list.addEventListener("click", () => {
+					const code = list.querySelector("pre").innerHTML;
+					render(code);
+				});
+			});
+
+			function render(code) {
+				container.innerHTML = `
+            
+			<pre>
+				${code}
+			</pre>
+                `;
+			}
+		</script>
+	</body>
+</html>

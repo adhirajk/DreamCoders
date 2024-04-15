@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SQL</title>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="container">
+		<div class="sidebar">
+            <div class="sidebar_heading"><h1>Content</h1></div>
+			<ul class="lists">
+				<li class="list">SQL Introduction
+
+					<pre>
+						<h1>Introduction to SQL</h1>
+SQL is a standard language for accessing and manipulating databases.
+
+						<h2>What is SQL?</h2>
+						<p>SQL stands for Structured Query Language</p>
+						<p>SQL lets you access and manipulate databases</p>
+						<p>SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987</p>
+						
+						<h2>What can SQL do?</h2>
+						<p>SQL can execute queries against a database</p>
+						<p>SQL can retrieve data from a database</p>
+						<p>SQL can insert records in a database</p>
+						<p>SQL can update records in a database</p>
+						<p>SQL can delete records from a database</p>
+						<p>SQL can create new databases</p>
+						<p>SQL can create new tables in a database</p>
+						<p>SQL can create stored procedures in a database</p>
+						<p>SQL can create views in a database</p>
+						<p>SQL can set permissions on tables, procedures, and views</p>
+
+						<h2>RDBMS</h2>
+						<pre>RDBMS stands for Relational Database Management System.
+
+RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.
+
+The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.
+Every table is broken up into smaller entities called fields. The fields in the Customers table consist of CustomerID, CustomerName, ContactName, Address, City, PostalCode and Country. A field is a column in a table that is designed to maintain specific information about every record in the table.
+
+A record, also called a row, is each individual entry that exists in a table. For example, there are 91 records in the above Customers table. A record is a horizontal entity in a table.
+
+A column is a vertical entity in a table that contains all information associated with a specific field in a table.
+						</pre>
+					</pre>
+				</li>
+				<li class="list">SQL Data Types
+					<pre>
+						<h1>SQL Data Types</h1>
+
+						<pre>Each column in a database table is required to have a name and a data type.
+
+An SQL developer must decide what type of data that will be stored inside each column when creating a table. The data type is a guideline for SQL to understand what type of data is expected inside of each column, and it also identifies how SQL will interact with the stored data.</pre>
+
+						<h2>String Data Types</h2>
+	<img src="string_data_types.png" alt="">
+
+						<h2>Numeric Data Types</h2>
+	<img src="numerical_data_types.png" alt="">
+
+						<h2>Date & Time Data Types</h2>
+	<img src="date_data_types.png" alt="">
+					</pre>
+				</li>
+				<li class="list">SQL CREATE Table
+
+					<pre>
+					<h1>Creating Table in SQL</h1>
+A Table is a combination of rows and columns. For creating a table we have to define the structure of a table by adding names to columns and providing data type and size of data to be stored in columns.
+
+	<img src="creating_table.png" alt="">	
+
+The column parameters specify the names of the columns of the table.
+
+The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.).
+
+					<h1>Example</h1>
+	<img src="creating_table_eg.png" alt="">
+
+					<h1>Creating table with data from another table</h1>
+
+A copy of an existing table can also be created using CREATE TABLE.
+
+The new table gets the same column definitions. All columns or specific columns can be selected.
+
+If you create a new table using an existing table, the new table will be filled with the existing values from the old table.
+
+	<img src="creating_table_from_another_table.png" alt="">
+
+					<h1>Example</h1>
+	<img src="creating_table_from_another_table_eg.png" alt="">
+					</pre>
+				</li>
+				<li class="list">SQL INSERT INTO 
+					<pre><h1>SQL INSERT INTO Statement</h1>
+The INSERT INTO statement is used to insert new records in a table.
+
+						<h3>INSERT INTO Syntax</h3>
+
+It is possible to write the INSERT INTO statement in two ways:
+
+1. Specify both the column names and the values to be inserted:
+
+	<img src="insert_into_1.png" alt="">
+
+2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
+
+	<img src="insert_into_2.png" alt="">
+
+						<h1>Example</h1>
+	<img src="insert_into_eg.png" alt="">
+
+						<h1>Inserting in multiple rows</h1>
+	<img src="insert_into_eg_mul_rows.png" alt="">
+					</pre>
+				</li>
+				<li class="list">SQL UPDATE 
+					<pre>
+						<h1>SQL UPDATE Statement</h1>
+
+The UPDATE statement is used to modify the existing records in a table.
+
+<img src="updating_table.png" alt="">
+
+						<h1>Example</h1>
+
+	<img src="demo_db.png" alt="">
+
+						<h1>Updating the table</h1>
+
+<img src="updating_table_eg.png" alt="">
+
+						<h1>After updation</h1>
+
+	<img src="after_updation.png" alt="">
+					</pre>
+				</li>
+				<li class="list">SQL DELETE 
+					<pre>
+						<h1>SQL DELETE Statement</h1>
+						<p>The DELETE statement is used to delete existing records in a table.</p>
+
+<img src="delete_syntax.png" alt="">
+
+						<h1>Example</h1>
+	<img src="delete_demo.png" alt="">
+
+						<h1>Statement Executed</h1>
+	<img src="delete_stmnt.png" alt="">
+
+						<h1>After deletion</h1>
+	<img src="after_deletion.png" alt="">
+					</pre>
+				</li>
+				<li class="list">SQL DROP
+				<pre>
+					<h1>DROP Column</h1>
+					<p>The DROP COLUMN command is used to delete a column in an existing table.</p>
+
+	<img src="drop_column.png" alt="">
+				</pre>
+				</li>
+				<li class="list">SQL CHAR Functions
+					<pre>
+						<h1>LOWER Function</h1>
+
+						<p>LOWER : This function converts alpha character values to lowercase. LOWER will actually return a fixed-length string if the incoming string is fixed-length. LOWER will not change any characters in the string that are not letters, since case is irrelevant for numbers and special characters, such as the dollar sign ( $ ) or modulus ( % ).</p>
+
+						<img src="lower_func.png" alt="">
+
+						<h1>UPPER Function</h1>
+
+						<p>This function converts alpha character values to uppercase. Also UPPER function too, will actually return a fixed-length string if the incoming string is fixed-length. UPPER will not change any characters in the string that are not letters, since case is irrelevant for numbers and special characters, such as the dollar sign ( $ ) or modulus ( % ).</p>
+
+						<img src="upper_func.png" alt="">
+
+						<h2>INTICAP Function</h2>
+
+						<p>This function converts alpha character values to uppercase for the first letter of each word and all others in lowercase. The words in the string is must be separated by either # or _ or space.</p>
+
+						<img src="inticap_func.png" alt="">
+
+						<h1>Character Manipulative function:-</h1>
+
+						<h2>CONCAT Function</h2>
+						<p>This function always appends ( concatenates ) string2 to the end of string1. If either of the string is NULL, CONCAT function returns the non-NULL argument. If both strings are NULL, CONCAT returns NULL.</p>
+						<img src="concat_func.png" alt="">
+
+						<h1>LENGTH Function</h1>
+						<p>This function returns the length of the input string. If the input string is NULL, then LENGTH function returns NULL and not Zero. Also, if the input string contains extra spaces at the start, or in between or at the end of the string, then the LENGTH function includes the extra spaces too and returns the complete length of the string.</p>
+						<img src="length_function.png" alt="">
+
+						<h1>SUBSTR Function</h1>
+						<p>This function returns a portion of a string from a given start point to an end point. If a substring length is not given, then SUBSTR returns all the characters till the end of string (from the starting position specified).</p>
+						<img src="substr_function.png" alt="">
+
+						<h1>INSTR Function</h1>
+						<p>This function returns numeric position of a character or a string in a given string. Optionally, you can provide a position m to start searching, and the occurrence n of string. Also, if the starting position is not given, then it starts search from index 1, by default. If after searching in the string, no match is found then, INSTR function returns 0.</p>
+						<img src="instr_function.png" alt="">
+
+						<h1>LPAD and RPAD Function</h1>
+						<p>These functions return the strings padded to the left or right ( as per the use ) ; hence the “L” in “LPAD” and the “R” in “RPAD” ; to a specified length, and with a specified pad string. If the pad string is not specified, then the given string is padded on the left or right ( as per the use ) with spaces.</p>
+						<img src="lpad_function.png" alt="">
+
+						<h1>TRIM Function</h1>
+						<p>This function trims the string input from the start or end (or both). If no string or char is specified to be trimmed from the string and there exists some extra space at start or end of the string, then those extra spaces are trimmed off.</p>
+						<img src="trim_function.png" alt="">
+
+						<h1>Replace</h1>
+						<p>This function searches for a character string and, if found, replaces it with a given replacement string at all the occurrences of the string. REPLACE is useful for searching patterns of characters and then changing all instances of that pattern in a single function call.
+
+If a replacement string is not given, then REPLACE function removes all the occurrences of that character string in the input string. If neither a match string nor a replacement string is specified, then REPLACE returns NULL.</p>
+						<img src="replace_function.png" alt="">
+					</pre>
+				</li>
+				<li class="list">Querying Multiple Tables
+					<pre>
+						<h1>EQUI JOIN</h1>
+						<p>EQUI JOIN creates a JOIN for equality or matching column(s) values of the relative tables. EQUI JOIN also create JOIN by using JOIN with ON and then providing the names of the columns with their relative tables to check equality using equal sign (=).</p>
+	<img src="equi_join.png" alt="">
+
+						<h1>NON EQUI Join</h1>
+						<p>NON EQUI Join performs a join using comparison operator other than (=) sign like >, <, >=, <= with conditions.</p>
+	<img src="non_equi_join.png" alt="">
+					</pre>
+				</li>
+				<li class="list">CARTESIAN JOIN
+					<pre>
+						<h1>CATESIAN JOIN</h1>
+						<p>The CARTESIAN JOIN is also known as CROSS JOIN. In a CARTESIAN JOIN there is a join for each row of one table to every row of another table. This usually happens when the matching column or WHERE condition is not specified.</p>
+	<img src="cartesian_join.png" alt="">
+					</pre>
+				</li>
+				<li class="list">SELF JOIN
+					<pre>
+						<h1>SELF JOIN</h1>
+						<p>As the name signifies, in SELF JOIN a table is joined to itself. That is, each row of the table is joined with itself and all other rows depending on some conditions. In other words we can say that it is a join between two copies of the same table.Syntax:</p>
+	<img src="self_join.png" alt="">
+					</pre>
+				</li>
+			</ul>
+		</div>
+		<div class="content_container">
+			
+		</div>
+		</div>
+
+
+
+		<script>
+			const container = document.querySelector(".content_container");
+			const [...lists] = document.querySelectorAll(".list");
+
+			lists.forEach((list) => {
+				list.addEventListener("click", () => {
+					const code = list.querySelector("pre").innerHTML;
+					render(code);
+				});
+			});
+
+			function render(code) {
+				container.innerHTML = `
+            
+			<pre>
+				${code}
+			</pre>
+                `;
+			}
+		</script>
+	</body>
+</html>
